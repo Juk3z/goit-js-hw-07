@@ -16,32 +16,33 @@ const images = [
   },
 ];
 
-const list = document.querySelector('#gallery')
+const listEl = document.querySelector('#gallery')
 
 function makingList(array) {
 
-    array.forEach(element => {
-        const liItem = document.createElement('li');
-        const itemImg = document.createElement('img');
-        itemImg.setAttribute('src', element.url);
-        itemImg.setAttribute('alt', element.alt);
-// стили элементов списка
-        liItem.style.listStyle = 'none'
-        itemImg.style.display = 'block'
-        itemImg.style.maxWidth = 'auto%'
-        itemImg.style.maxHeight = '300px'
-// добавление в документ    
-        liItem.append(itemImg);
-        list.appendChild(liItem);
+  array.forEach(element => {
+    const item = listEl.insertAdjacentHTML('beforeend', `<li  style='list-style: none'><img src='${element.url}' alt='${element.alt}' class='img'></img></li>`)  
     });
 
 // cстили  списка
-    list.style.padding = '0'
-    list.style.display = 'flex'
-    list.style.justifyContent = 'space-around'
+    listEl.style.padding = '0'
+    listEl.style.display = 'flex'
+    listEl.style.justifyContent = 'space-around'
+  
+  // стили img  
+  const imgEl = listEl.querySelectorAll('.img');
+  imgEl.forEach(item => {
+    item.style.display = 'block'
+    item.style.maxWidth = 'auto%'
+    item.style.maxHeight = '300px'
+  })
+    
 
 };
 
 
 
-makingList(images)
+
+makingList(images);
+
+

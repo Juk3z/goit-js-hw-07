@@ -1,4 +1,4 @@
-const items = document.querySelectorAll('.item')
+const itemsEl = document.querySelectorAll('.item')
 
 const getItemsLength = function (array) {
     console.log(`В списке ${array.length} категории`)
@@ -8,15 +8,15 @@ const getItemsLength = function (array) {
 
 const getCategoryName = function (array) {
     array.forEach(element => {
-        const categoryName = element.querySelector('h2').textContent;
-        const categoryNumbers = element.querySelectorAll('li').length;
-        console.log(`Категория: ${categoryName}`);
-        console.log(`Количество элементов: ${categoryNumbers}`)
+        const categoryNameEl = element.querySelector('h2').textContent;
+        const categoryNumbersEl = element.querySelectorAll('li').length;
+        console.log(`Категория: ${categoryNameEl}`);
+        console.log(`Количество элементов: ${categoryNumbersEl}`)
         
     
     })
 }
 
-getItemsLength(items);
+getItemsLength(itemsEl);
 
-getCategoryName(items);
+getCategoryName(itemsEl);

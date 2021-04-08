@@ -7,15 +7,15 @@ const ingredients = [
   'Приправы',
 ];
 
-const list = document.querySelector('#ingredients')
+const listEl = document.querySelector('#ingredients')
 
 
 
 function makingList(array) {
         array.forEach(element => {
-            const listItem = document.createElement('li');
-            listItem.textContent = element;
-            list.appendChild(listItem);
+            const listItemEl = document.createElement('li');
+            listItemEl.textContent = element;
+            listEl.appendChild(listItemEl);
     });
 
 };
