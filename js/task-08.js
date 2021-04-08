@@ -30,10 +30,7 @@ function createBoxes() {
         y.style.margin = '10px';
 
         sizeBoxes += 10;
-        boxesEl.appendChild(y);
-
-        
-        
+        boxesEl.appendChild(y);       
         
     };
 };
