@@ -5,6 +5,7 @@ function inputValidation(event) {
     if (event.target.value.length < event.target.dataset.length) {
         inputEl.classList.add('invalid')
         inputEl.classList.contains('valid') ? inputEl.classList.remove('valid') : false;
+
     };
 
     if (event.target.value.length >= event.target.dataset.length) { 
@@ -14,4 +15,4 @@ function inputValidation(event) {
 
 };
 
-inputEl.addEventListener('change', inputValidation);
+inputEl.addEventListener('blur', inputValidation);

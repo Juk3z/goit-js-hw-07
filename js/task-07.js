@@ -3,8 +3,8 @@ const textEl = document.querySelector('#text');
 
 
 
-function test(event) {
+function fontScaling(event) {
     textEl.style.fontSize = `${event.target.value}px`
 }
 
-inputEl.addEventListener('input', test)
+inputEl.addEventListener('input', fontScaling)

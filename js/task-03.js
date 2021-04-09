@@ -19,11 +19,14 @@ const images = [
 const listEl = document.querySelector('#gallery')
 
 function makingList(array) {
-
+  const imgArray = [];
+  
   array.forEach(element => {
-    const item = listEl.insertAdjacentHTML('beforeend', `<li  style='list-style: none'><img src='${element.url}' alt='${element.alt}' class='img'></img></li>`)  
-    });
+    imgArray.push(`<li  style='list-style: none'><img src='${element.url}' alt='${element.alt}' class='img'></img></li>`);
+  });
 
+  listEl.insertAdjacentHTML(`beforeend`, imgArray.join(''));
+  
 // cстили  списка
     listEl.style.padding = '0'
     listEl.style.display = 'flex'
@@ -35,8 +38,7 @@ function makingList(array) {
     item.style.display = 'block'
     item.style.maxWidth = 'auto%'
     item.style.maxHeight = '300px'
-  })
-    
+  });
 
 };
 

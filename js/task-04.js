@@ -3,15 +3,15 @@ const btnMinusEl = document.querySelector(`button[data-action='decrement']`);
 const valueEl = document.querySelector('#value');
 
 
+let value = 0;
 
-
-function increment(event) {
-    valueEl.textContent = Number(valueEl.textContent) + 1;
+function increment() {
+    valueEl.textContent = ++value;
 };
 
-function decrement(event) {
-    valueEl.textContent = Number(valueEl.textContent) - 1;
-}
+function decrement() {
+    valueEl.textContent = --value;
+};
 
 
 
