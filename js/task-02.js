@@ -12,12 +12,10 @@ const listEl = document.querySelector('#ingredients')
 
 
 function makingList(array) {
-  const newList = [];
-  array.forEach(element => {
+  const newList = array.map(element => {
     const listItemEl = document.createElement('li');
     listItemEl.textContent = element;
-
-    newList.push(listItemEl);
+    return listItemEl;
   });
 
   listEl.append(...newList);

@@ -19,13 +19,11 @@ const images = [
 const listEl = document.querySelector('#gallery')
 
 function makingList(array) {
-  const imgArray = [];
-  
-  array.forEach(element => {
-    imgArray.push(`<li  style='list-style: none'><img src='${element.url}' alt='${element.alt}' class='img'></img></li>`);
+  const newList = array.map(element => {
+    return `<li  style='list-style: none'><img src='${element.url}' alt='${element.alt}' class='img'></img></li>`
   });
 
-  listEl.insertAdjacentHTML(`beforeend`, imgArray.join(''));
+  listEl.insertAdjacentHTML(`beforeend`, newList.join(''));
   
 // cстили  списка
     listEl.style.padding = '0'
